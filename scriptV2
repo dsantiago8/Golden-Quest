@@ -32,6 +32,8 @@ label welcome:
     "Welcome [pname], to the city of Dorado!" "You, along with your four friends will embark on a journey to save your neighborhood from developers trying to repurpose the area."
     "The neighborhood is old and has a long mysterious history that you and your friend will discover with the hope that it can save your home."
 
+
+
 label expo:
     #insert scene
     #with fade
@@ -53,7 +55,7 @@ label intro:
     Sol "Why? Cuz she’s old?"
     Inez "Well that helps, but she kinda just seems to know everything. She has to know something about the gold, right?"
     Dio "Well we’ll start there then."
-    Bruno "What do you think, [playername]?"
+    Bruno "What do you think, [pname]?"
     pov "Yeah, let’s go!"
     "Exposition" "You guys leave the park, and head to Doña Ofelia’s home on Brand Street near Old Town. You knock on the door, and she answers with a smile. You ask if she knows anything about the gold, and she invites you guys in."
     Dio "We’re sorry to bother out of the blue."
@@ -71,7 +73,7 @@ label intro:
     Ofelia "You’re too young to have known it, but it was a very beloved restaurant run by a wonderful family that had been one of the first families in Dorado. I have a clipping of the article about the restaurant when it first opened."
     Sol "Really? That must have been a long time ago."
     Ofelia "It was. I don’t know if it’ll be of any use, but I’ll let you have it."
-"Exposition: You thank Doña Ofelia for her help, and you and your friends leave. You try to read the article, but some words are hard to makeout due to the paper’s old age."
+    "Exposition: You thank Doña Ofelia for her help, and you and your friends leave. You try to read the article, but some words are hard to makeout due to the paper’s old age."
 
 label first_mission:
        #insert scene
@@ -79,15 +81,24 @@ label first_mission:
        #show characters
        #with fade?
        "First Mission" "Instructions: Use the letter tiles to your right to unscramble the letters on the screen."
-       return
+       python:
+            pname = renpy.input("What is your name?", length=32)
+            pname = pname.strip()
 
+            if not pname:
+                pname = "John"
+       return
 label second_mission:
         #insert scene
         #with fade
         #show characters
         #with fade?
 
+
 label third_mission:
 #music change
     #play music "audio/bgm2.mp3" fadein 1.0 volume 0.5
     #insert scene
+
+
+
