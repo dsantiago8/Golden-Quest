@@ -1,0 +1,36 @@
+# The script of the game goes in this file.
+
+# Declare characters used by this game. The color argument colorizes the
+# name of the character.
+
+define Dio = Character("Dio")
+define Bruno = Character("Bruno")
+define Inez = Character("Inez")
+define Sol = Character("Sol")
+
+define Ofelia = Character("Abuelita Ofelia")
+# Anagram Game Words
+
+# The game starts here.
+label start:
+    "Welcome to the city of Dorado!" "You, along with your four friends will embark on a journey to save your neighborhood from developers trying to repurpose the area."
+    "The neighborhood is old and has a long mysterious history that you and your friend will discover with the hope that it can save your home."
+    return
+
+label expo:
+    "You and your friends are hanging out in your favorite spot in Dorado Park, when you see a sign that reads “Closing Soon. Area Soon To Be Demolished.”"
+
+    Dio "You guys hear?"
+    Bruno "Yeah, it doesn't feel real."
+    Inez "I keep thinking it’s not actually going to happen."
+    Sol "What are we even gonna do once it's gone?"
+    Bruno "Maybe it doesn’t have to go though."
+    Sol "What do you mean?"
+    Bruno "Have you guys ever heard of that really old story that when this town was founded someone hid a bunch of gold somewhere?"
+    Inez "Gold? Like real gold? What would we even do with that?"
+    Dio "We could buy out the developers! If we had enough money. That could work right?"
+    Bruno "I mean, we have to do something. We have to try."
+    Sol "I think we should too, but where would we start? I’m sure we aren’t the first to look for the gold. People have to know about the legend."
+    Inez "We could ask Doña Ofelia! She might know."
+    Sol "Why? Cuz she’s old?"
+
