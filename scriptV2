@@ -3,23 +3,17 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define player name = Character("")
+define Dio = Character("Dio")
 define Bruno = Character("Bruno")
 define Inez = Character("Inez")
 define Sol = Character("Sol")
 define pov = Character("[pname]")
-
 define Ofelia = Character("Doña Ofelia")
-# Anagram Game Words
 
 # The game starts here.
-"""label bgm:
-    play music "audio/bgm.mp3" fadein 1.0 volume 0.5
-    scene start
-"""
 
-label welcome:
-    #play music "audio/bgm.mp3" fadein 1.0 volume 0.5
+label start:
+    play music "audio/bgm.mp3" fadein 1.0 volume 0.5
     #inset scene
     #with fade
     python:
@@ -76,29 +70,32 @@ label intro:
     "Exposition: You thank Doña Ofelia for her help, and you and your friends leave. You try to read the article, but some words are hard to makeout due to the paper’s old age."
 
 label first_mission:
-       #insert scene
-       #with fade
-       #show characters
-       #with fade?
-       "First Mission" "Instructions: Use the letter tiles to your right to unscramble the letters on the screen."
-       python:
-            pname = renpy.input("What is your name?", length=32)
-            pname = pname.strip()
+    #insert scene
+    #with fade
+    #show characters
+    #with fade?
+    "First Mission" "Instructions: Use the letter tiles to your right to unscramble the letters on the screen."
+    
+    python:
+        scrambled_word = "mountain"
+        unscrambled = renpy.input("What word do the letters spell?", length=32)
+        unscrambled = unscrambled.strip()
 
-            if not pname:
-                pname = "John"
-       return
+        while unscrambled != "mountain":
+            print("Incorrect answer. Try again")
+            unscrambled = renpy.input("What word do the letters spell?", length=32)
+            unscrambled = unscrambled.strip()
+            
+    return
+
 label second_mission:
-        #insert scene
-        #with fade
-        #show characters
-        #with fade?
+    #insert scene
+    #with fade
+    #show characters
+    #with fade?
 
 
 label third_mission:
 #music change
     #play music "audio/bgm2.mp3" fadein 1.0 volume 0.5
     #insert scene
-
-
-
