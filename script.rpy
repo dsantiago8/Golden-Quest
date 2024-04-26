@@ -66,29 +66,44 @@ label intro:
     scene brunopark
     Bruno "What do you think, [pname]?"
     pov "Yeah, let’s go!"
-    scene house1
-
-    "Exposition" "You guys leave the park, and head to Doña Ofelia’s home on Brand Street near Old Town. You knock on the door, and she answers with a smile. You ask if she knows anything about the gold, and she invites you guys in."
-    scene house1
+  scene houseoutside
 
     with fade
+    "Exposition" "You guys leave the park, and head to Doña Ofelia’s home on Brand Street near Old Town. You knock on the door, and she answers with a smile. You ask if she knows anything about the gold, and she invites you guys in."
+
+    scene knock
+    "Exposition" "Sol knocks on the door"
+    scene diegoinside
     Dio "We’re sorry to bother out of the blue."
+    scene stephinside
+    
     Sol "Yeah, we can imagine a lot of people come to ask you about the gold."
+    scene ladyinside
     Ofelia "No no, I’m happy to have visitors. People don’t come by anymore to ask about the gold."
+    scene bashoinside
     Bruno "Did they used to?"
+    scene ladyinside
     Ofelia "They did a few years back when the mall first opened, and rumors went around that the developers wouldn’t touch Dorado until the gold was found."
+    scene isainside
     Inez "Why?"
+    scene ladyinside
     Ofelia "I couldn’t tell you. Why does anyone go looking for gold?"
     pov "We thought that if we found it we might be able to save Dorado."
     Ofelia "You kids shouldn’t have to worry about your home being taken away."
+    scene diegoinside
     Dio "Do you know where we might look for the gold?"
+    scene ladyinside
     Ofelia "I don’t, but you might want to start by looking into the old El Pescador restaurant. The owner is the grandson of the man who is believed to have hidden the gold."
     pov "What 's El Pescador?"
     Ofelia "You’re too young to have known it, but it was a very beloved restaurant run by a wonderful family that had been one of the first families in Dorado. I have a clipping of the article about the restaurant when it first opened."
+    scene stephinside
     Sol "Really? That must have been a long time ago."
+    scene ladyinside
     Ofelia "It was. I don’t know if it’ll be of any use, but I’ll let you have it."
+    scene paper
     "Exposition: You thank Doña Ofelia for her help, and you and your friends leave. You try to read the article, but some words are hard to makeout due to the paper’s old age."
 
+label first_mission:
 label first_mission:
     #insert scene
     #with fade
