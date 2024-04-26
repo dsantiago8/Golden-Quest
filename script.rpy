@@ -23,12 +23,15 @@ label start:
         if not pname:
             pname = "John"
             
+     scene scenerio
     "Welcome [pname], to the city of Dorado!" "You, along with your four friends will embark on a journey to save your neighborhood from developers trying to repurpose the area."
     "The neighborhood is old and has a long mysterious history that you and your friend will discover with the hope that it can save your home."
 
+
+
 label expo:
 
-    scene scenerio
+    scene sign
     #with fade
     "Exposition" "You and your friends are hanging out in your favorite spot in Dorado Park, when you see a sign that reads “Closing Soon. Area Soon To Be Demolished.”"
 
