@@ -1,8 +1,10 @@
 # Saving Dorado
-Visual Novel developed using RenPy
+Visual Novel developed using Ren'Py
 
+### How to Run Locally
+1. Download [Ren'Py] (https://www.renpy.org/latest.html)
 
-
-Stephanie Cruz 
-Basho Fleming
-In-person haptic elements provided by Isabella
+### Contributions
+Art by Stephanie Cruz 
+Music by Basho Fleming
+Script by Isabella Ramos
