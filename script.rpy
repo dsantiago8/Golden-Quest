@@ -290,35 +290,55 @@ label Old_town:
             unscrambled = unscrambled.strip()
 
 
+ scene house2
     "Exposition" "The five of you decide to head to Mills court to pay his great granddaughter a visit. You knock on the door, and an older woman, perhaps in her fifties, opens the door. "
     pov "Hello, are you Salvador Romero’s great granddaughter? "
-    "Leia Marquez" "Yes, I’m Leia. Leia Marquez." 
+    scene goutside
+    "Leia Marquez" "Yes, I’m Leia. Leia Marquez."
+    scene isahouse2
     Inez "We’re really sorry to bother you, but we were wondering if you could help us. "
+    scene goutside
     "Mrs. Marquez" "Come on in, it isn’t often we get guests asking about my great grandfather. "
+    scene diegohouse2
     Dio "Thank you. We were wonder-"
+    scene ghouse
     "Mrs. Marquez" "My great grandfather was a very kind man. A very people oriented person. I think that’s why he was missed so much."
+    scene isahouse2
     Inez "I’m sure he was. We’ve heard our parents speak fondly of him. "
+    scene bashohouse2
     Bruno "Do you know wh-"
+    scene ghouse
     "Mrs. Marquez" "He understood the importance of community, and in preserving our shared history. Look, I know you kids are looking for the gold, and I think I know why. I can’t say I don’t admire your effort. "
+    scene isahouse2
     Inez "The developer’s visited you already didn’t they? "
+    scene ghouse
     "Mrs. Marquez" "They did. It is important that you know that my grandfather did not hide the gold for safekeeping. He buried it as a way of returning it to the land. "
+    scene diegohouse2
     Dio "So he never meant for it to be found? "
+    scene ghouse
     "Mrs. Marquez" "I’m afraid not. But I can tell you what he told me. "
     pov "What he told you? "
     "Mrs. Marquez" "Yes, before he passed. Towards the end of his life, he had a very specific routine. He would walk to the park in the morning, visit his friend at the Los Arbolitos Housing Complex, go to El Pescador for lunch, then to visit his cousin Doña Ofelia, then to his daughter, my mother’s, house, and then finally to the corner market before hedging home. He didn’t do it everyday. He was old, and only went when his body allowed, but he didn’t want to feel disconnected from his community, especially in his old age. "
+    scene stephhouse2
     Sol "This town was his gold. "
+    scene ghouse
     "Mrs. Marquez" "Yes, it was. But he also liked games. I suggest you think about what I told you. I must go pick my daughter up from her friend's house now. "
+    scene scenerio
     "Exposition" "Back at Dorado park, you guys sit and think about what she said. What did she mean about her great grandfather liking games? What was so important about his relationship with the town?"
+    scene isapark
     Inez "Do you guys think he might’ve hid the gold at one of the places she mentioned? "
+    scene diegopark
     Dio "But then we would have to check every place. "
+    scene bashopark
     Bruno "Well we already know it's not at El Pescador."
-    pov "But she was talking about his love for the community. I feel like there has to be a reason she told us his routine. 
+    pov "But she was talking about his love for the community. I feel like there has to be a reason she told us his routine.
     Exposition: Suddenly, you have an idea. You go back to the map you took from the developer’s headquarters."
-    
+
     call screen Backdrop("Use the tacks and thread to make a map of Salvador Romero’s routine")
 
     centered "What will you do with the gold?"
-    
+
+
 
 return
 
