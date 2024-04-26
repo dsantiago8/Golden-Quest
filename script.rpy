@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -9,6 +9,8 @@ define Inez = Character("Inez")
 define Sol = Character("Sol")
 define pov = Character("[pname]")
 define Ofelia = Character("Doña Ofelia")
+
+default Lives = 5
 
 # The game starts here.
 
@@ -35,6 +37,7 @@ label expo:
 
 label intro:
     scene dio
+    show screen gameUI
     Dio "You guys hear?"
     Bruno "Yeah, it doesn't feel real."
     show diego
@@ -53,6 +56,9 @@ label intro:
     Dio "Well we’ll start there then."
     Bruno "What do you think, [pname]?"
     pov "Yeah, let’s go!"
+    
+    play music "audio/purple.mp3" fadein 1.0 volume 0.5
+
     "Exposition" "You guys leave the park, and head to Doña Ofelia’s home on Brand Street near Old Town. You knock on the door, and she answers with a smile. You ask if she knows anything about the gold, and she invites you guys in."
     scene house1
     with fade
@@ -79,20 +85,21 @@ label first_mission:
     #show characters
     #with fade?
     "First Mission" "Instructions: Use the letter tiles to your right to unscramble the letters on the screen."
-    
+    call screen Backdrop("o, n, u, m, i, a, t, n")
     python:
         scrambled_word = "mountain"
         unscrambled = renpy.input("What word do the letters spell?", length=32)
         unscrambled = unscrambled.strip()
 
         while unscrambled != "mountain":
-            print("Incorrect answer. Try again")
+            Lives -= 1
             unscrambled = renpy.input("What word do the letters spell?", length=32)
             unscrambled = unscrambled.strip()
             
     
 
 label second_mission:
+    
     "Exposition" "You and your friends figure out that the word you couldn’t quite make out in the article is “mountain”, and decide to head to Mountain street off of El Camino road." 
     #insert scene
     #with fade
@@ -117,6 +124,7 @@ label second_mission:
         "Investigate":
             jump investigate
         "Leave it":
+            call life_decrease
             jump third_mission
 
 label investigate:
@@ -133,6 +141,7 @@ label investigate:
     
 
 label third_mission:
+    play music "audio/green.mp3" fadein 1.0 volume 0.5 
 #music change
     #play music "audio/bgm2.mp3" fadein 1.0 volume 0.5
     #insert scene
@@ -152,16 +161,17 @@ label third_mission:
     # Show the lock-picking interface
     #unsure how to make work without these paarameters
     show screen lockpicking(lock_chest1_lock, "chest1")
+    pause
     
 
 
 label continue_game:
 
     # After exiting the lock-picking interface, continue with the game
-    pause
+    play music "audio/bgm.mp3"
     "Exposition" "You successfully pick the lock on the drawer, and open it to find a map inside. The map is of your neighborhood, except there are specific locations marked in red. The developer’s also left notes around the map. They were indeed looking for the gold."
     pov "It’s a map."
-    Bruno "What are all those red exes? There’s one at El Pescador’s demolition site."
+    Bruno "What are all those red x's? There’s one at El Pescador’s demolition site."
     Sol "These must be all the places they mean to look for the gold! They’re looking for the gold! "
     Dio "But why?"
     Inez "Just think, if they have the gold then they can go on with the development plans. It’s because of the gold that they haven’t done anything yet, that’s what that store owner said!"
@@ -173,7 +183,9 @@ label continue_game:
     Dio "No, it definitely would have been found by now. "
     menu:
         "Explore Tesoro street":
+            call life_decrease
             "Waste of time" "You and your frinds have lost precious time in your quest to save Dorado"
+            
         "Naah, no way. Let's go to Old Town instead":
             jump Old_town
 
@@ -199,7 +211,7 @@ label Old_town:
         unscrambled = unscrambled.strip()
 
         while unscrambled != "survived by his great granddaughter":
-            "Incorrect answer. Try again"
+            Lives -= 1
             unscrambled = renpy.input("What sentence do the words make up?", length=50)
             unscrambled = unscrambled.strip()
 
@@ -218,8 +230,9 @@ label Old_town:
     "Mrs. Marquez" "They did. It is important that you know that my grandfather did not hide the gold for safekeeping. He buried it as a way of returning it to the land. "
     Dio "So he never meant for it to be found? "
     "Mrs. Marquez" "I’m afraid not. But I can tell you what he told me. "
-    pov "What he told you? "
-    "Mrs. Marquez" "Yes, before he passed. Towards the end of his life, he had a very specific routine. He would walk to the park in the morning, visit his friend at the Los Arbolitos Housing Complex, go to El Pescador for lunch, then to visit his cousin Doña Ofelia, then to his daughter, my mother’s, house, and then finally to the corner market before hedging home. He didn’t do it everyday. He was old, and only went when his body allowed, but he didn’t want to feel disconnected from his community, especially in his old age. "
+    pov "What did he tell you? "
+    "Mrs. Marquez" "Yes, before he passed. Towards the end of his life, he had a very specific routine. He would walk to the park in the morning, visit his friend at the Los Arbolitos Housing Complex, go to El Pescador for lunch, then to visit his cousin Doña Ofelia,"
+    "Mrs. Marquez (cont.)" "then to his daughter, my mother’s, house, and then finally to the corner market before heading home. He didn’t do it everyday. He was old, and only went when his body allowed, but he didn’t want to feel disconnected from his community, especially in his old age. "
     Sol "This town was his gold. "
     "Mrs. Marquez" "Yes, it was. But he also liked games. I suggest you think about what I told you. I must go pick my daughter up from her friend's house now. "
     "Exposition" "Back at Dorado park, you guys sit and think about what she said. What did she mean about her great grandfather liking games? What was so important about his relationship with the town?"
@@ -230,9 +243,32 @@ label Old_town:
     Exposition: Suddenly, you have an idea. You go back to the map you took from the developer’s headquarters."
     
     call screen Backdrop("Use the tacks and thread to make a map of Salvador Romero’s routine")
-
-    centered "What will you do with the gold?"
     
 
-return
+
+label end_choice:
+    centered "Where is the gold located?"
+    menu:
+        "Tesoro":
+            jump life_decrease_2
+        "Heritage Square":
+            jump success
+        "Dorado Park":
+            jump life_decrease_2
+        "Old Town":    
+            jump life_decrease_2
+
+    centered "What will you do with the gold?"
+
+label life_decrease_2:
+    $ Lives -= 1
+    "You have lost a life"
+    return 
+
+label life_decrease:
+    $ Lives -=1
+    "You have lost a life"
+    
+
+
 
