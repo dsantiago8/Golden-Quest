@@ -1,5 +1,5 @@
 # Saving Dorado
-Visual Novel developed using Ren'Py !["renpy logo"]([http://url/to/img.png](https://en.m.wikipedia.org/wiki/File:Ren%E2%80%99Py_Logo_6-13-6_200x307px.png)
+Visual Novel developed using Ren'Py !["renpy logo"]([http://url/to/img.png](https://en.m.wikipedia.org/wiki/File:Ren%E2%80%99Py_Logo_6-13-6_200x307px.png))
 
 ### How to Run Locally
 1. Download [Ren'Py] (https://www.renpy.org/latest.html).
