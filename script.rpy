@@ -124,24 +124,39 @@ label first_mission:
     
 
 label second_mission:
-    "Exposition" "You and your friends figure out that the word you couldn’t quite make out in the article is “mountain”, and decide to head to Mountain street off of El Camino road." 
+    scene empty
+    "Exposition" "You and your friends figure out that the word you couldn’t quite make out in the article is “mountain”, and decide to head to Mountain street off of El Camino road."
     #insert scene
     #with fade
     #show characters
     #with fade?
-    Bruno "Of course, we should have guessed! This is where the old El Pescador restaurant was." 
+    scene bashoempty
+    Bruno "Of course, we should have guessed! This is where the old El Pescador restaurant was."
+    scene isaempty
     Inez "It’s just a pile of rubble now. We never would have known it was here if not for the article."
+    scene diegoempty
     Dio "I guess developers have been trying to buy this land for a while huh? Why can’t they just leave us alone?"
-    Sol "The gold might be a reason." 
-    "Store owner" "You got that right." 
-    Inez "Who are you?" 
+    scene stephempty
+    Sol "The gold might be a reason."
+    scene person
+    "Store owner" "You got that right."
+    scene isaempty
+    Inez "Who are you?"
+    scene person
     "Store owner" "I own the hardware store just over there. I heard you kids talking about the gold."
-    Bruno "Yeah, what about it?" 
+    scene bashoempty
+    Bruno "Yeah, what about it?"
+    scene person
     "Store Owner" " I just thought you kids might wanna know that some suits came by this site earlier. They were also talking about some gold."
-    Sol "Why would they be talking about the gold?" 
+    scene stephempty
+    Sol "Why would they be talking about the gold?"
+    scene person
     "Store owner" "Well apparently the only thing keeping them from developing this land is the rumor about the gold. They don’t want to develop until it's found."
+    scene diegoempty
     Dio "That’s not good. What if they’re looking for the gold too!"
-    "Store owner" "I don’t know what you kids intend on doing with the gold, but I know I don’t want the developers finding it. It’s probably better it stay lost." 
+    scene person
+    "Store owner" "I don’t know what you kids intend on doing with the gold, but I know I don’t want the developers finding it. It’s probably better it stay lost."
+    scene down
     "Exposition" "You and your friends think about what the store owner said. What if the gold is better off staying hidden? That is, of course, until you see something catch your eye in the rubble near your feet."
 
     menu: 
