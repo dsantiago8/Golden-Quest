@@ -169,39 +169,53 @@ label second_mission:
             jump third_mission
 
 label investigate:
-    pov "Look what I found! It’s a keycard!" 
+       pov "Look what I found! It’s a keycard!"
+    scene stephempty
     Sol "One of the developers must have dropped it when they came by earlier."
+    scene diegoempty
     Dio "What should we do with it?"
+    scene isaempty
     Inez "Well, now that we know the developers are interested in the gold too, shouldn’t we see what they’ve found?"
+    scene diegoempty
     Dio "How would we do that?"
+    scene bashoempty
     Bruno "I think she’s suggesting we break into their headquarters just outside the neighborhood."
+    scene isaempty
     Inez "Your words."
     pov "It wouldn’t be breaking in if we have a keycard."
+    scene stephempty
     Sol "I can’t believe we’re doing this."
 
-    
+
 
 label third_mission:
 #music change
     #play music "audio/bgm2.mp3" fadein 1.0 volume 0.5
-    #insert scene
+    scene building
     "Exposition" "The five of you head to the developer’s headquarters. After entering the building without any trouble, you guys spread out. It’s a small building, but there are still many places to look."
+    scene stephbuild
     Sol "This is crazy! We’re gonna get caught!"
+    scene bashobuild
     Bruno "We might not, it is the weekend."
+    scene isabuild
     Inez "We’ll be fast. It’s not like we set off any alarms."
+    scene drawer
     "Exposition" "This is the fifth office you guys check, and everyone is starting to lose hope. You start looking around the office."
     pov "Look! This drawer is locked."
+    scene diegobuild
     Dio "That’s weird. None of the other drawers were locked."
+    scene stephbuild
     Sol "Well we might have a keycard but we definitely don’t have the key to this drawer."
-    Bruno "[pname], can you try picking the lock?" 
+    scene bashobuild
+    Bruno "[pname], can you try picking the lock?"
     pov "I pick one lock and now you guys think I'm a common thief! "
-        
-#Lock picking written with the help of JessicleCat's locking script 
+
+#Lock picking written with the help of JessicleCat's locking script
 
     # Show the lock-picking interface
     #unsure how to make work without these paarameters
     show screen lockpicking(lock_chest1_lock, "chest1")
-    
+
 
 
 label continue_game:
@@ -210,15 +224,24 @@ label continue_game:
     pause
     "Exposition" "You successfully pick the lock on the drawer, and open it to find a map inside. The map is of your neighborhood, except there are specific locations marked in red. The developer’s also left notes around the map. They were indeed looking for the gold."
     pov "It’s a map."
+    scene bashot
     Bruno "What are all those red exes? There’s one at El Pescador’s demolition site."
+    scene stepht
     Sol "These must be all the places they mean to look for the gold! They’re looking for the gold! "
+    scene diegot
     Dio "But why?"
+    scene isat
     Inez "Just think, if they have the gold then they can go on with the development plans. It’s because of the gold that they haven’t done anything yet, that’s what that store owner said!"
     pov "Well, they don’t know we have this. We have to check all these places before they do."
+    scene bashot
     Bruno "Where do we start? "
+    scene isat
     Inez "This is probably too obvious but, should we look at Tesoro street? It literally means treasure. "
+    scene diegot
     Dio "That’s too obvious."
+    scene stepht
     Sol "That could be the point. "
+    scene diegot
     Dio "No, it definitely would have been found by now. "
     menu:
         "Explore Tesoro street":
@@ -227,16 +250,30 @@ label continue_game:
             jump Old_town
 
 label Old_town:
+    scene musuem
     "Exposition" "You and your friends walk to Old Town. It is a small strip with old storefronts on either side of the road. There isn’t much there besides a few vendors, restaurants, and a museum. You guys decide to enter the museum. "
+    scene bashom
     Bruno "We might be able to find something out here. There has to be something about the gold. "
+    scene isam
     Inez "You think? It’s just an urban legend. "
+    scene diegom
     Dio "Everybody seems to know about it though. "
-    Sol "Here!" 
+    stephm
+    Sol "Here!"
+    scene stone
     "Exposition" "You all run over to where Sol is standing. She is looking at a display about a man named Salvador Romero. "
+    scene isam
     Inez "Who’s Salvador Romero?"
+    scene stephm
     Sol "It says here he’s the one who buried the gold. Or he knows where it's hidden. "
+    scene brashom
     Bruno "Yeah! It says here that the gold was passed down to him, and he buried it for safekeeping. "
-    Dio "What else does it say?" 
+    scene diegom
+    Dio "What else does it say?"
+    scene stephm
+
+
+
     Sol "There is a snippet from his obituary. It’s so old, I can’t really make out the words.  "
     "Instructions: Use the letter tiles to your right to unscramble the words on the screen."
     # Displaying the centered text with a backdrop
