@@ -10,6 +10,9 @@ define Sol = Character("Sol")
 define pov = Character("[pname]")
 define Ofelia = Character("Doña Ofelia")
 
+
+default Lives = 5
+
 # The game starts here.
 
 label start:
