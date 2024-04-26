@@ -26,35 +26,51 @@ label start:
     "Welcome [pname], to the city of Dorado!" "You, along with your four friends will embark on a journey to save your neighborhood from developers trying to repurpose the area."
     "The neighborhood is old and has a long mysterious history that you and your friend will discover with the hope that it can save your home."
 
-
-
 label expo:
-    scene scenario1
+
+    scene scenerio
     #with fade
     "Exposition" "You and your friends are hanging out in your favorite spot in Dorado Park, when you see a sign that reads “Closing Soon. Area Soon To Be Demolished.”"
 
 label intro:
-    scene dio
+    scene diegopark
     Dio "You guys hear?"
+    scene bashopark
     Bruno "Yeah, it doesn't feel real."
-    show diego
+    scene isapark
     Inez "I keep thinking it’s not actually going to happen."
+    scene stephpark
     Sol "What are we even gonna do once it's gone?"
+    scene bashopark
     Bruno "Maybe it doesn’t have to go though."
+    scene stephpark
     Sol "What do you mean?"
+    scene bashopark
     Bruno "Have you guys ever heard of that really old story that when this town was founded someone hid a bunch of gold somewhere?"
+    scene isapark
     Inez "Gold? Like real gold? What would we even do with that?"
+    scene diegopark
     Dio "We could buy out the developers! If we had enough money. That could work right?"
+    scene bashopark
     Bruno "I mean, we have to do something. We have to try."
+    scene stephpark
     Sol "I think we should too, but where would we start? I’m sure we aren’t the first to look for the gold. People have to know about the legend."
+    scene isapark
     Inez "We could ask Doña Ofelia! She might know."
+    scene stephpark
     Sol "Why? Cuz she’s old?"
+    scene isapark
     Inez "Well that helps, but she kinda just seems to know everything. She has to know something about the gold, right?"
+    scene diegopark
     Dio "Well we’ll start there then."
+    scene brunopark
     Bruno "What do you think, [pname]?"
     pov "Yeah, let’s go!"
+    scene house1
+
     "Exposition" "You guys leave the park, and head to Doña Ofelia’s home on Brand Street near Old Town. You knock on the door, and she answers with a smile. You ask if she knows anything about the gold, and she invites you guys in."
     scene house1
+
     with fade
     Dio "We’re sorry to bother out of the blue."
     Sol "Yeah, we can imagine a lot of people come to ask you about the gold."
