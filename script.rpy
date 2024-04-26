@@ -261,7 +261,7 @@ label Old_town:
     Inez "You think? It’s just an urban legend. "
     scene diegom
     Dio "Everybody seems to know about it though. "
-    stephm
+    scene stephm
     Sol "Here!"
     scene stone
     "Exposition" "You all run over to where Sol is standing. She is looking at a display about a man named Salvador Romero. "
