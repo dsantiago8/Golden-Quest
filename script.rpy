@@ -106,7 +106,7 @@ label intro:
     Sol "Really? That must have been a long time ago."
     scene ladyinside
     Ofelia "It was. I don’t know if it’ll be of any use, but I’ll let you have it."
-    scene paper
+    
     "Exposition: You thank Doña Ofelia for her help, and you and your friends leave. You try to read the article, but some words are hard to makeout due to the paper’s old age."
 
 label first_mission:
@@ -162,7 +162,6 @@ label second_mission:
     Dio "That’s not good. What if they’re looking for the gold too!"
     scene person
     "Store owner" "I don’t know what you kids intend on doing with the gold, but I know I don’t want the developers finding it. It’s probably better it stay lost."
-    scene down
     "Exposition" "You and your friends think about what the store owner said. What if the gold is better off staying hidden? That is, of course, until you see something catch your eye in the rubble near your feet."
 
     menu: 
@@ -202,7 +201,6 @@ label third_mission:
     Bruno "We might not, it is the weekend."
     scene isabuild
     Inez "We’ll be fast. It’s not like we set off any alarms."
-    scene drawer
     "Exposition" "This is the fifth office you guys check, and everyone is starting to lose hope. You start looking around the office."
     pov "Look! This drawer is locked."
     scene diegobuild
@@ -263,7 +261,6 @@ label Old_town:
     Dio "Everybody seems to know about it though. "
     scene stephm
     Sol "Here!"
-    scene stone
     "Exposition" "You all run over to where Sol is standing. She is looking at a display about a man named Salvador Romero. "
     scene isam
     Inez "Who’s Salvador Romero?"
