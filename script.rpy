@@ -1,7 +1,8 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
+
 
 define Dio = Character("Dio")
 define Bruno = Character("Bruno")
@@ -12,9 +13,13 @@ define Ofelia = Character("Doña Ofelia")
 
 default Lives = 5
 
+
+    
+    
 # The game starts here.
 
 label start:
+    show screen timer_screen()
     play music "audio/bgm.mp3" fadein 1.0 volume 0.5
     #inset scene
     #with fade
@@ -70,14 +75,22 @@ label intro:
     Dio "Well we’ll start there then."
     scene bashopark
     Bruno "What do you think, [pname]?"
-    pov "Yeah, let’s go!"
+    menu:
+        "Yeah, let’s go!":
+            pass
+        "Maybe some other day":
+            call life_decrease
+            pass
+    
     
     play music "audio/purple.mp3" fadein 1.0 volume 0.5
 
     "Exposition" "You guys leave the park, and head to Doña Ofelia’s home on Brand Street near Old Town. You knock on the door, and she answers with a smile. You ask if she knows anything about the gold, and she invites you guys in."
-    scene houseoutside
-    with fade
-    scene knock
+    scene houseoutside with Fade(0.5, 1.0, 0.5)
+    "*[Ofelia]'s House*"
+    
+    scene knock with Fade(0, 0.5, .5)
+    play sound "audio/knocking.mp3" volume 1.0
     "*Sol knocks on the door*"
     scene diegoinside
     Dio "We’re sorry to bother out of the blue."
@@ -120,8 +133,9 @@ label first_mission:
         unscrambled = unscrambled.strip()
 
         while unscrambled != "mountain":
-            Lives -= 1
-            unscrambled = renpy.input("What word do the letters spell?", length=32)
+            
+            Lives -= 1 
+            unscrambled = renpy.input("What word do the letters spell?", length=32) 
             unscrambled = unscrambled.strip()
             
 label eval:
@@ -401,12 +415,12 @@ label what_to_save:
 
 label life_decrease_2:
     $ Lives -= 1
-    "You have lost a life"
+    "You have lost a life" with hpunch
     jump end_choice 
 
 label life_decrease:
     $ Lives -=1
-    "You have lost a life"
+    "You have lost a life" with hpunch
     return
     
 label success:
