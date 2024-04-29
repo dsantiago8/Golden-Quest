@@ -1,0 +1,96 @@
+\documentclass[10pt,twocolumn]{article}
+
+% use the oxycomps style file
+\usepackage{oxycomps}
+
+% usage: \fixme[comments describing issue]{text to be fixed}
+% define \fixme as not doing anything special
+\newcommand{\fixme}[2][]{#2}
+% overwrite it so it shows up as red
+\renewcommand{\fixme}[2][]{\textcolor{red}{#2}}
+% overwrite it again so related text shows as footnotes
+%\renewcommand{\fixme}[2][]{\textcolor{red}{#2\footnote{#1}}}
+
+% read references.bib for the bibtex data
+\bibliography{references}
+
+% include metadata in the generated pdf file
+\pdfinfo{
+    /Title (Tutorial Report
+    )
+    /Author (Diego Santiago)
+}
+
+\title{Tutorial Report Revised}
+\author{Diego Santiago}
+\affiliation{Occidental College}
+\email{dsantiago@oxy.edu}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+My comprehensive project (comps) is centered around the development of a video game designed to enhance cognitive processes such as reflexes, reaction times, and mental rotations in the player base. While the tutorial I followed focuses on creating a simple 2D platform game using the Godot Engine, it proved remarkably relevant to my comps topic. The Godot Engine tutorial served as a foundational resource, guiding me through the process of setting up a 2D environment, implementing various assets and textures, and incorporating game mechanics using GDScript.
+
+The primary goal of the tutorial was not only to teach the technicalities of building a 2D platform game but also to provide the skills and insights necessary for adapting these concepts to my unique project. A successful outcome, in this context, would be the ability to implement game mechanics that engage users in a haptic sense, crafting and designing a visually appealing 2D environment, and creating a collision system for all game entities present on the screen. On a larger and overarching scale, The tutorial serves as a stepping stone towards the realization of this goal.
+
+\section{Methods}
+Following the Godot Engine tutorial, I initiated the game development process by establishing a captivating 2D environment. This phase involved creating a captivating and functional backdrop designed to keep the players engaged. The tutorial's guidance on asset implementation and texture mapping proved invaluable, offering essential insights that enabled me to manufacture an environment conducive to cognitive challenges.
+
+\subsection{Scene and Environment Creation}
+The creation of scenes served as the foundation for the game environment, with careful consideration given to maintaining flexibility and tidiness. Graphics assets, sourced from the "Pixel Adventure" pack, were integrated into the project to enhance visual elements, including background images and terrain tiles.
+
+The design of the background and terrain involved the utilization of appropriate Godot nodes such as TextureRect and TileMap, facilitating the display and manipulation of graphical assets. 
+
+\subsection{Character Creation and Management}
+Character creation was achieved through a combination of Sprite and CollisionShape2D nodes, defining both the visual appearance and collision properties of the main character. To enhance modularity and ease of management, subscenes were created to encapsulate individual game objects, allowing for independent editing while reflecting changes in the main scene.
+
+\subsection{Movement Mechanics and Input Mapping}
+The implementation of movement mechanics relied on scripting using the GDScript language, enabling functionalities such as gravity-based movement, jumping, and horizontal motion in response to player input. Additionally, animation integration was employed to provide visual feedback for character actions, including idle, running, and jumping states. Input mapping configuration was finalized to define and map player controls to specific keys or gamepad buttons, ensuring customizable and responsive gameplay experiences across various input devices. Overall, the step-by-step structure of the tutorial facilitated the systematic development of a 2D platformer game within the Godot engine, emphasizing structured design, scripting, and integration processes.
+
+
+\section{Metrics and Results}
+The subsequent analysis delves into various aspects of developing a 2D platformer game using the Godot engine. It explores the extent to which the project derived from the tutorial succeeds and excels in the following areas: scene creation and graphics integration, character creation and subscene management, scripting for movement and animation integration, input mapping configuration, and overall performance and user experience. Each aspect undergoes scrutiny based on specific criteria to ensure the successful creation of a visually appealing and engaging gameplay experience.
+
+\subsection{Measuring Success of Visual Elements}
+Success in scene creation and graphics integration was measured by the accuracy and completeness of the game environment within the Godot engine. By the end of the tutorial, the scenes created reflect a  successful scene creation, with visually appealing backgrounds and terrain tiles aligning with the intended aesthetic of the game.
+
+\subsection{Analysing Character Creation and Subscene Management}
+Competency in character creation and subscene management was assessed based on the functionality and modularity of the main character within the game environment. Results indicated effective integration of character sprites and collision properties, with subscenes enabling efficient management and editing of game objects.
+
+Another metric used to measure the success of character creation was based on the utilization of Sprite and CollisionShape2D nodes to define the visual appearance and collision properties of the main character. Additionally, the effectiveness of the collision system was measured by its extension to encompass all game entities present on the screen, ensuring accurate interaction between different elements in the game environment. 
+
+\subsection{Assessing Scripting for Movement and Animation Integration}
+Evaluation of scripting for movement and animation integration focused on the responsiveness and fluidity of player-controlled actions. Results showed successful implementation of gravity-based movement, jumping mechanics, and smooth animation transitions, enhancing the overall gameplay experience.
+
+\subsection{Evaluation of Input Mapping Configuration}
+Effectiveness of input mapping configuration was determined by analyzing the responsiveness and customization options available for player controls. Findings demonstrated robust input mapping capabilities, allowing for seamless integration of keyboard and gamepad inputs to enhance accessibility and user experience.
+
+\subsection{Gauging Overall User Experience}
+The evaluation of the overall performance and user experience of the developed 2D platformer game encompassed comprehensive gameplay testing and solicitation of user feedback. Through testing and analysis, it was observed that the tutorial's success hinged on the seamless integration of various elements. Specifically, the intuitive controls, visually appealing graphics, and smooth character animations were identified as key components contributing to the overall gaming experience.
+
+The intuitive controls allowed players to easily navigate through the game world, perform actions, and interact with the environment without encountering any significant barriers or frustrations. This aspect of the game design facilitated a sense of fluidity and responsiveness, enabling players to focus more on the gameplay itself rather than grappling with cumbersome control schemes.
+
+Furthermore, the visually appealing graphics served to immerse players in the game's world, creating an aesthetically pleasing environment that captured their attention and engaged their senses. The cohesive art style and attention to detail in the graphics enhanced the overall atmosphere of the game, making it visually captivating and enjoyable to explore.
+
+Lastly, the smooth character animations added another layer of polish to the gaming experience, bringing the main character and other in-game entities to life. Fluid and realistic animations not only improved the overall visual presentation of the game but also contributed to the sense of immersion and believability within the game world.
+
+It is important to note that the successful implementation of these elements did not occur in isolation but rather built upon each other synergistically. The intuitive controls facilitated smooth gameplay, which, in turn, allowed players to fully appreciate the visually appealing graphics and smooth character animations. This cohesive integration of gameplay mechanics, visual aesthetics, and character animations culminated in a holistic and overall great gaming experience that resonated positively with users, eliciting satisfaction and enjoyment throughout their gameplay journey.
+
+
+\section{Reflection}
+Watching the Godot Engine tutorial has been an enriching experience that significantly contributed to my comps project. It provided a solid foundation for 2D game development and equipped me with the skills necessary to create an engaging and purposeful gaming experience.
+
+As I reflect on the tutorial's impact on my comps project, I feel a sense of confidence in the chosen direction and the potential positive influence of the developed game on cognitive functions. The tutorial acted as a springboard for my creativity and problem-solving abilities, offering a structured framework that allowed me to explore and expand on the core concepts presented.
+
+\subsection{Challenges and Considerations}
+However, with this newfound confidence comes a set of concerns. While the tutorial cemented a solid technical understanding, the real challenge lies in tailoring the game to effectively achieve its cognitive enhancement goals across diverse user demographics. It underscores the need for further user testing and iterative refinement to ensure the game's efficacy in delivering meaningful cognitive improvements.
+
+In contemplating the overall experience, the Godot Engine tutorial served as more than just an instructional manual. It acted as a catalyst for creative exploration, prompting me to think critically about how to balance engaging game mechanics with purposeful cognitive challenges. The process of adapting these newfound skills to my unique project emphasized the importance of harmonizing entertainment value with the overarching goals of the project.
+
+\subsection{Future Directions}
+Looking forward, constant fine-tuning and user feedback will be instrumental in addressing lingering concerns and ensuring the success of my comps project. The tutorial, while laying the technical groundwork, highlighted the value of adaptability and the need for a personalized touch in the development process. As I navigate the challenges ahead, the lessons learned from this tutorial will remain highly relevant, guiding me in creating a game that not only captivates players but also contributes meaningfully to their cognitive well-being.
+\label{sec:paper}
+\end{document}
