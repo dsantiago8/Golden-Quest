@@ -5,10 +5,10 @@
     "Mrs. Marquez" "visit his friend at the Los Arbolitos Housing Complex,"
     scene map2
     "Mrs. Marquez" "go to El Pescador for lunch, "
-    scene map2.5
+    scene map25
     "Mrs. Marquez" "then to visit his cousin Doña Ofelia,"
     scene map4
-    "Mrs.Marquez (cont.)" "then to his daughter, my mother’s house,"
+    "Mrs.Marquez (cont.)" "then here, my mother’s house, where we are right now,"
     scene map5
     "Mrs. Marquez" "and then finally to the corner market before heading home. Eventually, he only went when his body allowed. He didn’t want to feel disconnected from his community, especially in his old age. "
     scene stephh
