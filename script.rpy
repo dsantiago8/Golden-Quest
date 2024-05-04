@@ -11,7 +11,7 @@ define Sol = Character("Sol")
 define pov = Character("[pname]")
 define Ofelia = Character("Doña Ofelia")
 
-default Lives = 5
+default Lives = 10
 
 
     
@@ -86,11 +86,11 @@ label intro:
     play music "audio/purple.mp3" fadein 1.0 volume 0.5
 
     "Exposition" "You guys leave the park, and head to Doña Ofelia’s home on Brand Street near Old Town. You knock on the door, and she answers with a smile. You ask if she knows anything about the gold, and she invites you guys in."
-    scene houseoutside with Fade(0.5, 1.0, 0.5)
+    scene house with Fade(0.5, 1.0, 0.5)
     "*[Ofelia]'s House*"
     
     scene knock with Fade(0, 0.5, .5)
-    play sound "audio/knocking.mp3" volume 1.0
+    play sound "audio/knocking.mp3" volume 2.0
     "*Sol knocks on the door*"
     scene diegoinside
     Dio "We’re sorry to bother out of the blue."
@@ -135,7 +135,7 @@ label first_mission:
         while unscrambled != "mountain":
             
             Lives -= 1 
-            unscrambled = renpy.input("What word do the letters spell?", length=32) 
+            unscrambled = renpy.input("What word do the letters spell?", length=32 ) 
             unscrambled = unscrambled.strip()
             
 label eval:
@@ -251,24 +251,24 @@ label continue_game:
     play music "audio/bgm.mp3"
     "Exposition" "You successfully pick the lock on the drawer, and open it to find a map inside. The map is of your neighborhood, except there are specific locations marked in red. The developer’s also left notes around the map. They were indeed looking for the gold."
     pov "It’s a map."
-    scene bashot
+    scene map
     Bruno "What are all those red x's? There’s one at El Pescador’s demolition site."
-    scene stepht
+    scene stephh
     Sol "These must be all the places they mean to look for the gold! They’re looking for the gold! "
-    scene diegot
+    scene diegoh
     Dio "But why?"
-    scene isat
+    scene isah
     Inez "Just think, if they have the gold then they can go on with the development plans. It’s because of the gold that they haven’t done anything yet, that’s what that store owner said!"
     pov "Well, they don’t know we have this. We have to check all these places before they do."
-    scene bashot
+    scene map
     Bruno "Where do we start? "
-    scene isat
+    scene isah
     Inez "This is probably too obvious but, should we look at Tesoro street? It literally means treasure. "
-    scene diegot
+    scene diegoh
     Dio "That’s too obvious."
-    scene stepht
+    scene stephh
     Sol "That could be the point. "
-    scene diegot
+    scene diegoh
     Dio "No, it definitely would have been found by now. "
     menu:
         "Explore Tesoro street":
@@ -287,24 +287,24 @@ label evaluation_3:
 label Old_town:
     scene museum
     "Exposition" "You and your friends walk to Old Town. It is a small strip with old storefronts on either side of the road. There isn’t much there besides a few vendors, restaurants, and a museum. You guys decide to enter the museum. "
-    scene bashot
+    scene bashom
     Bruno "We might be able to find something out here. There has to be something about the gold. "
     scene isam
     Inez "You think? It’s just an urban legend. "
-    scene diegot
+    scene diegom
     Dio "Everybody seems to know about it though. "
-    scene stepht
+    scene stephm
     Sol "Here!" 
     "Exposition" "You all run over to where Sol is standing. She is looking at a display about a man named Salvador Romero. "
-    scene isat
+    scene isam
     Inez "Who’s Salvador Romero?"
-    scene stepht
+    scene stephm
     Sol "It says here he’s the one who buried the gold. Or he knows where it's hidden. "
-    scene bashot
+    scene bashom
     Bruno "Yeah! It says here that the gold was passed down to him, and he buried it for safekeeping. "
-    scene diegot
+    scene diegom
     Dio "What else does it say?" 
-    scene stepht
+    scene stephm
     Sol "There is a snippet from his obituary. It’s so old, I can’t really make out the words.  "
     "Instructions: Use the letter tiles to your right to unscramble the words on the screen."
     # Displaying the centered text with a backdrop
@@ -329,41 +329,49 @@ label evaluation_4:
     scene house2
     "Exposition" "The five of you decide to head to Mills court to pay his great granddaughter a visit. You knock on the door, and an older woman, perhaps in her fifties, opens the door. "
     pov "Hello, are you Salvador Romero’s great granddaughter? "
-    scene goutside
+    scene grandoutside
     "Leia Marquez" "Yes, I’m Leia. Leia Marquez." 
-    scene isahouse2
+    scene isaho
     Inez "We’re really sorry to bother you, but we were wondering if you could help us. "
-    scene goutside
+    scene grandoutside
     "Mrs. Marquez" "Come on in, it isn’t often we get guests asking about my great grandfather. "
-    scene diegohouse2
+    scene diegoho
     
     Dio "Thank you. We were wonder-"
-    scene ghouse
+    scene grand
     "Mrs. Marquez" "My great grandfather was a very kind man. A very people oriented person. I think that’s why he was missed so much."
-    scene isahouse2
+    scene isah
     Inez "I’m sure he was. We’ve heard our parents speak fondly of him. "
-    scene bashohouse2
+    scene bashoh
     
     Bruno "Do you know wh-"
-    scene ghouse
+    scene grand
     "Mrs. Marquez" "He understood the importance of community, and in preserving our shared history. Look, I know you kids are looking for the gold, and I think I know why. I can’t say I don’t admire your effort. "
-    scene isahouse2
+    scene isah
     Inez "The developer’s visited you already didn’t they? "
-    scene ghouse
+    scene grand
     "Mrs. Marquez" "They did. It is important that you know that my grandfather did not hide the gold for safekeeping. He buried it as a way of returning it to the land. "
-    scene diegohouse2
+    scene diegoh
     Dio "So he never meant for it to be found? "
-    scene ghouse
+    scene grand
     "Mrs. Marquez" "I’m afraid not. But I can tell you what he told me. "
     pov "What did he tell you? "
-    "Mrs. Marquez" "Yes, before he passed. Towards the end of his life, he had a very specific routine. He would walk to the park in the morning, visit his friend at the Los Arbolitos Housing Complex, go to El Pescador for lunch, then to visit his cousin Doña Ofelia,"
-    "Mrs. Marquez (cont.)" "then to his daughter, my mother’s, house, and then finally to the corner market before heading home. He didn’t do it everyday. He was old, and only went when his body allowed, but he didn’t want to feel disconnected from his community, especially in his old age. "
-    scene stephhouse2
-    
+    scene mapp
+    "Mrs. Marquez" "Yes, before he passed. Towards the end of his life, he had a very specific routine. He would walk to the park in the morning, "
+    scene map1
+    "Mrs. Marquez" "visit his friend at the Los Arbolitos Housing Complex, " 
+    scene map2
+    "Mrs. Marquez" "go to El Pescador for lunch, "
+    scene map25
+    "Mrs. Marquez" "then to visit his cousin Doña Ofelia,"
+    scene map4
+    "Mrs. Marquez" "then to his daughter, my mother’s, house,"
+    scene map5
+    "Mrs. Marquez" "and then finally to the corner market before heading home. He didn’t do it everyday. He was old, and only went when his body allowed, but he didn’t want to feel disconnected from his community, especially in his old age. "
     Sol "This town was his gold. "
-    scene ghouse
+    scene grand
     "Mrs. Marquez" "Yes, it was. But he also liked games. I suggest you think about what I told you. I must go pick my daughter up from her friend's house now. "
-    scene scenario
+    scene scenerio
     "Exposition" "Back at Dorado park, you guys sit and think about what she said. What did she mean about her great grandfather liking games? What was so important about his relationship with the town?"
     scene isapark
     Inez "Do you guys think he might’ve hid the gold at one of the places she mentioned? "
@@ -371,9 +379,9 @@ label evaluation_4:
     Dio "But then we would have to check every place. "
     scene bashopark
     Bruno "Well we already know it's not at El Pescador."
-    pov "But she was talking about his love for the community. I feel like there has to be a reason she told us his routine. 
-    Exposition: Suddenly, you have an idea. You go back to the map you took from the developer’s headquarters."
-    
+    pov "But she was talking about his love for the community. I feel like there has to be a reason she told us his routine. "
+    "Exposition" "Suddenly, you have an idea. You go back to the map you took from the developer’s headquarters."
+    scene map5
     call screen Backdrop("Use the tacks and thread to make a map of Salvador Romero’s routine")
     
 
@@ -398,6 +406,7 @@ label end_eval:
         pass
 
 label what_to_save:
+    play sound winsound volume 0.75
     "Congratulations!" "You have found the gold, however it is not enough to save your entire neighborhood. You are left with a difficult decision." 
     menu:
         "Save the school":
