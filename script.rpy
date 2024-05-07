@@ -285,7 +285,7 @@ label evaluation_3:
         pass    
 
 label Old_town:
-    scene museum
+    scene musuem
     "Exposition" "You and your friends walk to Old Town. It is a small strip with old storefronts on either side of the road. There isn’t much there besides a few vendors, restaurants, and a museum. You guys decide to enter the museum. "
     scene bashom
     Bruno "We might be able to find something out here. There has to be something about the gold. "
