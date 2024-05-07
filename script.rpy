@@ -198,7 +198,7 @@ label investigate:
     Dio "How would we do that?"
     scene bashoempty
     Bruno "I think she’s suggesting we break into their headquarters just outside the neighborhood."
-    scene isapark
+    scene isaempty
     Inez "Your words."
     pov "It wouldn’t be breaking in if we have a keycard."
     scene stephempty
